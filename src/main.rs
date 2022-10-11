@@ -27,7 +27,7 @@ impl Sandbox for Program {
     }
 
     fn title(&self) -> String {
-        String::from("Program")
+        "Program".into()
     }
 
     fn update(&mut self, message: Self::Message) {
@@ -60,10 +60,12 @@ impl Sandbox for Program {
             .padding(16)
             .spacing(16)
             .align_items(Alignment::Center);
+
         Container::new(content)
             .width(Length::Fill)
             .height(Length::Fill)
             .center_x()
+            // .center_y()
             .style(style::Container)
             .into()
     }
